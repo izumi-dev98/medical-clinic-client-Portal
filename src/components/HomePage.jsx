@@ -3,13 +3,13 @@ import SiteFooter from './SiteFooter'
 import './HomePage.css'
 
 function getClinicImage(clinic, images, storageUrl) {
-  const value = clinic.profile_image_url || images?.[0]?.name
+  const value = clinic.cloudinary_url || clinic.profile_image_url || (clinic.cloudinary_public_id ? `cloudinary:${clinic.cloudinary_public_id}` : null) || images?.[0]?.name
   if (!value) return null
   return value.startsWith('http') ? value : storageUrl('clinic-images', value)
 }
 
 function getPreviewImage(item, bucket, images, index, storageUrl) {
-  const value = item.image_url || item.image_urls?.[0] || images?.[index % Math.max(images.length, 1)]?.name
+  const value = item.cloudinary_url || item.image_url || item.image_urls?.[0] || (item.cloudinary_public_id ? `cloudinary:${item.cloudinary_public_id}` : null) || images?.[index % Math.max(images.length, 1)]?.name
   if (!value) return null
   return value.startsWith('http') ? value : storageUrl(bucket, value)
 }

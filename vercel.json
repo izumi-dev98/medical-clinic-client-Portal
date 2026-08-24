@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/supabase/storage/v1/object/public/:bucket/:path*",
+      "destination": "https://frrlwrshfraaitydqvpl.supabase.co/storage/v1/object/public/:bucket/:path*"
+    },
+    {
+      "source": "/supabase/:path*",
+      "destination": "https://frrlwrshfraaitydqvpl.supabase.co/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

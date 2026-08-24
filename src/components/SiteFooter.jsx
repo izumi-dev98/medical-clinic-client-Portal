@@ -1,7 +1,7 @@
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTelegram, FaTiktok, FaXTwitter, FaYoutube } from 'react-icons/fa6'
 
 function getClinicLogo(clinic, images, storageUrl) {
-  const value = clinic?.profile_image_url || images?.[0]?.name
+  const value = clinic?.cloudinary_url || clinic?.profile_image_url || (clinic?.cloudinary_public_id ? `cloudinary:${clinic.cloudinary_public_id}` : null) || images?.[0]?.name
   if (!value) return null
   return value.startsWith('http') ? value : storageUrl?.('clinic-images', value)
 }

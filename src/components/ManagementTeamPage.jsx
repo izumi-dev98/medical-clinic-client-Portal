@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 import SiteFooter from './SiteFooter'
 
 function getImage(member, images, index, storageUrl) {
-  const value = member.image_url || images[index % Math.max(images.length, 1)]?.name
+  const value = member.cloudinary_url || member.image_url || (member.cloudinary_public_id ? `cloudinary:${member.cloudinary_public_id}` : null) || images[index % Math.max(images.length, 1)]?.name
   if (!value) return null
   return value.startsWith('http') ? value : storageUrl('team-images', value)
 }

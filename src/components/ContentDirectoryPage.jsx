@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 import SiteFooter from './SiteFooter'
 
 function getImage(item, bucket, images, index, storageUrl) {
-  const value = item.image_url || item.image_urls?.[0] || images[index % Math.max(images.length, 1)]?.name
+  const value = item.cloudinary_url || item.image_url || item.image_urls?.[0] || (item.cloudinary_public_id ? `cloudinary:${item.cloudinary_public_id}` : null) || images[index % Math.max(images.length, 1)]?.name
   if (!value) return null
   return value.startsWith('http') ? value : storageUrl(bucket, value)
 }

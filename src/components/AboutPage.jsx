@@ -3,10 +3,11 @@ import Swal from 'sweetalert2'
 import Navbar from './Navbar'
 import SiteFooter from './SiteFooter'
 
-const imageKeys = ['image_url', 'image', 'photo_url', 'award_image_url', 'profile_image_url']
+const imageKeys = ['cloudinary_url', 'image_url', 'image', 'photo_url', 'award_image_url', 'profile_image_url', 'cloudinary_public_id']
 
 function getImage(row, bucket, storageUrl, fallback) {
-  const value = imageKeys.map((key) => row?.[key]).find(Boolean) || row?.image_urls?.[0]
+  const cloudinaryId = row?.cloudinary_public_id
+  const value = row?.cloudinary_url || (cloudinaryId ? `cloudinary:${cloudinaryId}` : null) || imageKeys.map((key) => row?.[key]).find(Boolean) || row?.image_urls?.[0]
   if (value) return value.startsWith('http') ? value : storageUrl(bucket, value)
   return fallback ? storageUrl(bucket, fallback) : null
 }

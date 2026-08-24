@@ -2,10 +2,10 @@ import { useEffect, useMemo, useState } from 'react'
 import Navbar from './Navbar'
 import SiteFooter from './SiteFooter'
 
-const imageKeys = ['image_url', 'image', 'photo_url', 'profile_image_url']
+const imageKeys = ['cloudinary_url', 'image_url', 'image', 'photo_url', 'profile_image_url', 'cloudinary_public_id']
 
 function getImage(doctor, storageUrl) {
-  const value = imageKeys.map((key) => doctor?.[key]).find(Boolean)
+  const value = doctor?.cloudinary_url || (doctor?.cloudinary_public_id ? `cloudinary:${doctor.cloudinary_public_id}` : null) || imageKeys.map((key) => doctor?.[key]).find(Boolean)
   if (!value) return null
   return value.startsWith('http') ? value : storageUrl('doctor-images', value)
 }
