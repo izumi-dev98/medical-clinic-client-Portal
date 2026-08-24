@@ -8,6 +8,7 @@ import ServicesPage from './components/ServicesPage'
 import ContentDirectoryPage from './components/ContentDirectoryPage'
 import ContactPage from './components/ContactPage'
 import './App.css'
+import './responsive.css'
 
 function App() {
   const [content, setContent] = useState({ clinic: null, mission: [], awards: [], services: [], doctors: [], managementTeam: [], packages: [], promotions: [], blog: [], corporate: [], images: {} })
