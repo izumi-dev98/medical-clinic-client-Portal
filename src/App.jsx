@@ -7,6 +7,7 @@ import ManagementTeamPage from './components/ManagementTeamPage'
 import ServicesPage from './components/ServicesPage'
 import ContentDirectoryPage from './components/ContentDirectoryPage'
 import ContactPage from './components/ContactPage'
+import AppointmentModal from './components/AppointmentModal'
 import './App.css'
 import './responsive.css'
 
@@ -15,12 +16,17 @@ function App() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
   const [page, setPage] = useState(getPageFromHash)
+  const [appointmentOpen, setAppointmentOpen] = useState(false)
 
   useEffect(() => {
     const handleHashChange = () => setPage(getPageFromHash())
     window.addEventListener('hashchange', handleHashChange)
     return () => window.removeEventListener('hashchange', handleHashChange)
   }, [])
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+  }, [page])
 
   useEffect(() => {
     async function loadContent() {
@@ -60,7 +66,13 @@ function App() {
     loadContent()
   }, [])
 
-  return page === 'about'
+  useEffect(() => {
+    const openAppointment = () => setAppointmentOpen(true)
+    window.addEventListener('open-appointment', openAppointment)
+    return () => window.removeEventListener('open-appointment', openAppointment)
+  }, [])
+
+  const pageContent = page === 'about'
     ? <AboutPage content={content} loading={loading} error={error} storageUrl={storageUrl} />
     : page === 'contact'
       ? <ContactPage content={content} storageUrl={storageUrl} />
@@ -79,6 +91,8 @@ function App() {
                 : page === 'corporate'
                   ? <ContentDirectoryPage content={content} storageUrl={storageUrl} type="corporate" bucket="corporate-images" eyebrow="For organisations" title={<>Healthier teams, <i>stronger futures.</i></>} searchPlaceholder="Search corporate care" />
                   : <HomePage content={content} storageUrl={storageUrl} />
+
+  return <>{pageContent}<AppointmentModal content={content} open={appointmentOpen} onClose={() => setAppointmentOpen(false)} /></>
 }
 
 function getPageFromHash() {
