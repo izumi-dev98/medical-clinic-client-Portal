@@ -1,0 +1,22 @@
+clinic_information
+mission_vision_core
+awards
+services
+doctors
+management_team
+medical_packages
+promotions
+blog_posts
+corporate
+Storage buckets:
+
+clinic-images
+mission-images
+award-images
+service-images
+doctor-images
+team-images
+package-images
+promotion-images
+blog-images
+corporate-images
