@@ -43,8 +43,6 @@ function App() {
         supabase.from('corporate').select('*'),
       ])
       const imageBuckets = ['clinic-images', 'mission-images', 'award-images', 'doctor-images', 'team-images', 'service-images', 'package-images', 'promotion-images', 'blog-images', 'corporate-images']
-      const imageResults = await Promise.all(imageBuckets.map((bucket) => supabase.storage.from(bucket).list('', { limit: 100 })))
-
       const firstError = clinicResult.error || missionResult.error || awardsResult.error || servicesResult.error || doctorsResult.error || managementResult.error || packagesResult.error || promotionsResult.error || blogResult.error || corporateResult.error
       if (firstError) setError('Some clinic details could not be loaded.')
       setContent({
@@ -58,9 +56,18 @@ function App() {
         promotions: promotionsResult.data || [],
         blog: blogResult.data || [],
         corporate: corporateResult.data || [],
-        images: Object.fromEntries(imageBuckets.map((bucket, index) => [bucket, imageResults[index].data || []])),
+        images: {},
       })
       setLoading(false)
+
+      const imageResults = await Promise.all(imageBuckets.map((bucket) => supabase.storage.from(bucket).list('', {
+        limit: 100,
+        sortBy: { column: 'created_at', order: 'desc' },
+      })))
+      setContent((currentContent) => ({
+        ...currentContent,
+        images: Object.fromEntries(imageBuckets.map((bucket, index) => [bucket, imageResults[index].data || []])),
+      }))
     }
 
     loadContent()
