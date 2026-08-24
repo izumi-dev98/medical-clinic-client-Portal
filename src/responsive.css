@@ -1,3 +1,4 @@
+ .site-shell .doctor-modal .modal-close{align-items:center;background:var(--cream);border:1px solid var(--navy);bottom:12px!important;color:var(--navy);display:flex;font-size:18px;height:32px;justify-content:center;left:50%;line-height:1;padding:0;position:absolute;right:auto!important;top:auto!important;transform:translateX(-50%);width:32px;z-index:2}
 @media (max-width:700px){
   .site-shell .doctor-card{display:block;width:100%}
   .site-shell .doctor-photo{aspect-ratio:4 / 3;height:auto;min-height:0;padding:0;width:100%}
@@ -8,5 +9,5 @@
   .site-shell .doctor-modal h2{font-size:38px;line-height:.95;margin:14px 0 10px}
   .site-shell .doctor-modal .modal-bio{font-size:13px;line-height:1.6;margin:20px 0}
   .site-shell .doctor-modal .modal-contact{gap:10px;padding-top:12px}
-  .site-shell .doctor-modal .modal-close{background:var(--cream);border:1px solid var(--navy);bottom:10px;color:var(--navy);display:block;font-size:22px;height:34px;margin:0;position:absolute;right:10px;top:auto;width:34px;z-index:2}
+  .site-shell .doctor-modal .modal-close{bottom:12px!important;font-size:18px;height:30px;left:50%;right:auto!important;top:auto!important;width:30px}
 }
