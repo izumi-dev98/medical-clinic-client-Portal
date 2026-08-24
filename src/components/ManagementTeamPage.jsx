@@ -24,8 +24,11 @@ export default function ManagementTeamPage({ content, storageUrl }) {
 
   useEffect(() => {
     const handleResize = () => {
-      setPageSize(window.innerWidth <= 700 ? 3 : 6)
-      setPage(1)
+      const nextPageSize = window.innerWidth <= 700 ? 3 : 6
+      setPageSize((currentPageSize) => {
+        if (currentPageSize !== nextPageSize) setPage(1)
+        return nextPageSize
+      })
     }
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
