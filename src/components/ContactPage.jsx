@@ -27,7 +27,7 @@ export default function ContactPage({ content, storageUrl }) {
         { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY },
       )
       setFormStatus('sent')
-      event.currentTarget.reset()
+      formRef.current?.reset()
       Swal.fire({
         icon: 'success',
         title: 'Message sent successfully',
@@ -36,7 +36,7 @@ export default function ContactPage({ content, storageUrl }) {
       })
     } catch {
       setFormStatus('sent')
-      event.currentTarget.reset()
+      formRef.current?.reset()
       Swal.fire({
         icon: 'success',
         title: 'Message sent successfully',
