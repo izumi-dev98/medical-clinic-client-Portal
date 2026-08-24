@@ -66,7 +66,12 @@ function App() {
       })))
       setContent((currentContent) => ({
         ...currentContent,
-        images: Object.fromEntries(imageBuckets.map((bucket, index) => [bucket, imageResults[index].data || []])),
+        images: Object.fromEntries(imageBuckets.map((bucket, index) => [bucket, (imageResults[index].data || []).map((image) => ({
+          ...image,
+          name: image.updated_at || image.created_at
+            ? `${image.name}?v=${encodeURIComponent(image.updated_at || image.created_at)}`
+            : image.name,
+        }))])),
       }))
     }
 
