@@ -6,6 +6,9 @@
  .site-shell .preview-card-image{height:240px}
  .site-shell .service-card-image{height:210px}
  .site-shell .doctors-hero{background:var(--mint);position:sticky;top:63px;z-index:10}
+ .site-shell .doctors-hero{padding:10px 5.5vw}
+ .site-shell .doctors-hero h1{font-size:clamp(28px,3vw,44px);margin:8px 0}
+ .site-shell .doctors-hero .doctor-search{padding:6px 0}
  .site-shell.home-page .home-visual{aspect-ratio:1;border-radius:50%;height:auto;overflow:hidden}
  .site-shell.home-page .home-visual-image{border-radius:50%;object-fit:cover}
  .site-shell.home-page .preview-card-image,.site-shell.home-page .service-card-image{border-radius:50%;height:190px;margin-left:auto;margin-right:auto;object-fit:cover;width:190px}
@@ -25,7 +28,8 @@
   .site-shell .doctor-photo{height:360px;min-height:360px}
   .site-shell .preview-card-image{height:210px}
   .site-shell .service-card-image{height:185px}
-  .site-shell .doctors-hero{top:59px}
+  .site-shell .doctors-hero{padding:8px 6vw;top:59px}
+  .site-shell .doctors-hero h1{font-size:30px;margin:6px 0}
   .site-shell.home-page .home-visual{height:auto}
   .site-shell.home-page .preview-card-image{height:150px;width:150px}
   .site-shell.home-page .service-card-image{height:150px;width:150px}
