@@ -21,6 +21,10 @@ CHECK (status IN ('Pending', 'Reject', 'Completed'));
 
 ALTER TABLE public.appointments ENABLE ROW LEVEL SECURITY;
 
+-- Appointment data contains patient information. The public website only needs
+-- to submit requests; reads and mutations must stay server-side.
+REVOKE SELECT, UPDATE, DELETE ON public.appointments FROM PUBLIC, anon, authenticated;
+
 DROP POLICY IF EXISTS "Anyone can submit appointment requests" ON public.appointments;
 CREATE POLICY "Anyone can submit appointment requests"
 ON public.appointments
