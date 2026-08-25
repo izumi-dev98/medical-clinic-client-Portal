@@ -3,6 +3,7 @@
  .site-shell .doctor-photo{flex:none;height:280px;min-height:280px;width:100%}
  .site-shell .doctor-info{flex:1}
  .site-shell .doctor-photo img,.site-shell .preview-card-image,.site-shell .service-card-image,.site-shell .card-top img,.site-shell .award-list-new img,.site-shell .approach-list article>img{object-fit:cover;width:100%}
+ .site-shell .doctor-grid,.site-shell .service-grid,.site-shell .preview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
  .site-shell .preview-card-image{height:280px;margin-left:-20px;margin-right:-20px;width:calc(100% + 40px)}
  .site-shell .service-card-image{height:280px;margin-left:-20px;margin-right:-20px;width:calc(100% + 40px)}
  .site-shell .doctors-hero{background:var(--mint);position:sticky;top:63px;z-index:10}
