@@ -1,9 +1,12 @@
  .site-shell .doctor-modal .modal-close{align-items:center;background:var(--cream);border:1px solid var(--navy);bottom:16px;color:var(--navy);display:flex;font-size:18px;height:32px;justify-content:center;line-height:1;padding:0;position:absolute;right:16px;top:auto;transform:none;width:32px;z-index:2}
- .site-shell .doctor-photo{height:360px}
+ .site-shell .doctor-photo{height:450px}
  .site-shell .doctor-photo img,.site-shell .preview-card-image,.site-shell .service-card-image,.site-shell .card-top img,.site-shell .award-list-new img,.site-shell .approach-list article>img{object-fit:cover}
- .site-shell .preview-card-image{height:190px}
- .site-shell .service-card-image{height:170px}
+ .site-shell .preview-card-image{height:240px}
+ .site-shell .service-card-image{height:210px}
  .site-shell .doctors-hero{background:var(--mint);position:sticky;top:63px;z-index:10}
+ .site-shell.home-page .home-visual{aspect-ratio:1;border-radius:50%;height:auto;overflow:hidden}
+ .site-shell.home-page .home-visual-image{border-radius:50%;object-fit:cover}
+ .site-shell.home-page .preview-card-image,.site-shell.home-page .service-card-image{border-radius:50%;height:190px;margin-left:auto;margin-right:auto;object-fit:cover;width:190px}
  .site-shell .doctor-modal .modal-profile-image,.site-shell .doctor-modal .service-modal-image{background:var(--mint);border-radius:0!important;display:block;height:260px!important;margin:0 0 30px;object-fit:contain!important;width:100%!important}
  .site-shell .doctor-modal .modal-image-fallback{border-radius:0;height:260px;margin:0 0 30px;width:100%}
 @media (max-width:700px){
@@ -17,10 +20,13 @@
   .site-shell .doctor-modal .modal-bio{font-size:13px;line-height:1.6;margin:20px 0}
   .site-shell .doctor-modal .modal-contact{gap:10px;padding-top:12px}
   .site-shell .doctor-modal .modal-profile-image,.site-shell .doctor-modal .service-modal-image{height:210px!important;margin-bottom:20px;width:100%!important}
-  .site-shell .doctor-photo{height:300px}
-  .site-shell .preview-card-image{height:170px}
-  .site-shell .service-card-image{height:150px}
+  .site-shell .doctor-photo{height:360px}
+  .site-shell .preview-card-image{height:210px}
+  .site-shell .service-card-image{height:185px}
   .site-shell .doctors-hero{top:59px}
+  .site-shell.home-page .home-visual{height:auto}
+  .site-shell.home-page .preview-card-image{height:150px;width:150px}
+  .site-shell.home-page .service-card-image{height:150px;width:150px}
   .site-shell .doctor-modal .modal-image-fallback{height:210px;margin-bottom:20px;width:100%}
   .site-shell .doctor-modal .modal-close{bottom:12px;font-size:18px;height:30px;right:12px;top:auto;width:30px}
 }

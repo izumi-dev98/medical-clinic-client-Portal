@@ -18,7 +18,7 @@ export default function HomePage({ content, storageUrl }) {
   const clinic = content.clinic || {}
   const image = getClinicImage(clinic, content.images['clinic-images'], storageUrl)
   return (
-    <main className="site-shell">
+    <main className="site-shell home-page">
       <Navbar clinic={clinic} images={content.images['clinic-images']} storageUrl={storageUrl} />
 
       <section className="home-hero">
