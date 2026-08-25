@@ -1,5 +1,7 @@
  .site-shell .doctor-modal .modal-close{align-items:center;background:var(--cream);border:1px solid var(--navy);bottom:16px;color:var(--navy);display:flex;font-size:18px;height:32px;justify-content:center;line-height:1;padding:0;position:absolute;right:16px;top:auto;transform:none;width:32px;z-index:2}
- .site-shell .doctor-photo{height:450px}
+ .site-shell .doctor-card{display:flex;flex-direction:column;height:100%}
+ .site-shell .doctor-photo{flex:none;height:450px;min-height:450px}
+ .site-shell .doctor-info{flex:1}
  .site-shell .doctor-photo img,.site-shell .preview-card-image,.site-shell .service-card-image,.site-shell .card-top img,.site-shell .award-list-new img,.site-shell .approach-list article>img{object-fit:cover}
  .site-shell .preview-card-image{height:240px}
  .site-shell .service-card-image{height:210px}
@@ -20,7 +22,7 @@
   .site-shell .doctor-modal .modal-bio{font-size:13px;line-height:1.6;margin:20px 0}
   .site-shell .doctor-modal .modal-contact{gap:10px;padding-top:12px}
   .site-shell .doctor-modal .modal-profile-image,.site-shell .doctor-modal .service-modal-image{height:210px!important;margin-bottom:20px;width:100%!important}
-  .site-shell .doctor-photo{height:360px}
+  .site-shell .doctor-photo{height:360px;min-height:360px}
   .site-shell .preview-card-image{height:210px}
   .site-shell .service-card-image{height:185px}
   .site-shell .doctors-hero{top:59px}
