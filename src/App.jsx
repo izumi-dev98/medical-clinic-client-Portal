@@ -8,11 +8,15 @@ import ServicesPage from './components/ServicesPage'
 import ContentDirectoryPage from './components/ContentDirectoryPage'
 import ContactPage from './components/ContactPage'
 import AppointmentModal from './components/AppointmentModal'
+import Rabbit from 'rabbit-node'
 import './App.css'
 import './responsive.css'
 
 function normalizeUnicode(value) {
-  if (typeof value === 'string') return value.normalize('NFC')
+  if (typeof value === 'string') {
+    const hasZawgyiMarkers = /^(?:[\u1031\u103b-\u103e])|[\u1060-\u109f]/u.test(value)
+    return hasZawgyiMarkers ? Rabbit.zg2uni(value).normalize('NFC') : value.normalize('NFC')
+  }
   if (Array.isArray(value)) return value.map(normalizeUnicode)
   if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([key, entry]) => [key, normalizeUnicode(entry)]))
   return value
