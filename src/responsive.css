@@ -1,10 +1,10 @@
  .site-shell .doctor-modal .modal-close{align-items:center;background:var(--cream);border:1px solid var(--navy);bottom:16px;color:var(--navy);display:flex;font-size:18px;height:32px;justify-content:center;line-height:1;padding:0;position:absolute;right:16px;top:auto;transform:none;width:32px;z-index:2}
  .site-shell .doctor-card{display:flex;flex-direction:column;height:100%}
- .site-shell .doctor-photo{flex:none;height:280px;min-height:280px}
+ .site-shell .doctor-photo{flex:none;height:280px;min-height:280px;width:100%}
  .site-shell .doctor-info{flex:1}
- .site-shell .doctor-photo img,.site-shell .preview-card-image,.site-shell .service-card-image,.site-shell .card-top img,.site-shell .award-list-new img,.site-shell .approach-list article>img{object-fit:cover}
- .site-shell .preview-card-image{height:280px}
- .site-shell .service-card-image{height:280px}
+ .site-shell .doctor-photo img,.site-shell .preview-card-image,.site-shell .service-card-image,.site-shell .card-top img,.site-shell .award-list-new img,.site-shell .approach-list article>img{object-fit:cover;width:100%}
+ .site-shell .preview-card-image{height:280px;margin-left:0;margin-right:0;width:100%}
+ .site-shell .service-card-image{height:280px;margin-left:0;margin-right:0;width:100%}
  .site-shell .doctors-hero{background:var(--mint);position:sticky;top:63px;z-index:10}
  .site-shell .doctors-hero{padding:4px 5.5vw}
  .site-shell .doctors-hero h1{font-size:clamp(24px,2.4vw,36px);margin:4px 0}
@@ -14,7 +14,7 @@
  .site-shell footer>div:not(.footer-phone) p,.site-shell footer>div:not(.footer-phone)>a,.site-shell footer .footer-phone a,.site-shell footer .footer-phone span{font-size:14px;line-height:1.5}
  .site-shell.home-page .home-visual{aspect-ratio:1;border-radius:50%;height:auto;overflow:hidden}
  .site-shell.home-page .home-visual-image{border-radius:50%;object-fit:cover}
- .site-shell.home-page .preview-card-image,.site-shell.home-page .service-card-image{border-radius:50%;height:280px;margin-left:auto;margin-right:auto;object-fit:cover;width:280px}
+ .site-shell.home-page .preview-card-image,.site-shell.home-page .service-card-image{border-radius:50%;height:280px;margin-left:auto;margin-right:auto;object-fit:cover;width:min(100%, 280px)}
  .site-shell .doctor-modal .modal-profile-image,.site-shell .doctor-modal .service-modal-image{background:var(--mint);border-radius:0!important;display:block;height:260px!important;margin:0 0 30px;object-fit:contain!important;width:100%!important}
  .site-shell .doctor-modal .modal-image-fallback{border-radius:0;height:260px;margin:0 0 30px;width:100%}
 @media (max-width:700px){
@@ -28,16 +28,16 @@
   .site-shell .doctor-modal .modal-bio{font-size:13px;line-height:1.6;margin:20px 0}
   .site-shell .doctor-modal .modal-contact{gap:10px;padding-top:12px}
   .site-shell .doctor-modal .modal-profile-image,.site-shell .doctor-modal .service-modal-image{height:210px!important;margin-bottom:20px;width:100%!important}
-  .site-shell .doctor-photo{height:220px;min-height:220px}
-  .site-shell .preview-card-image{height:220px}
-  .site-shell .service-card-image{height:220px}
+  .site-shell .doctor-photo{height:220px;min-height:220px;width:100%}
+  .site-shell .preview-card-image{height:220px;width:100%}
+  .site-shell .service-card-image{height:220px;width:100%}
   .site-shell .doctors-hero{padding:4px 6vw;top:59px}
   .site-shell .doctors-hero h1{font-size:24px;margin:3px 0}
   .site-shell footer>.logo{font-size:15px}
   .site-shell footer>.logo small{font-size:8px}
   .site-shell.home-page .home-visual{height:auto}
-  .site-shell.home-page .preview-card-image{height:220px;width:220px}
-  .site-shell.home-page .service-card-image{height:220px;width:220px}
+  .site-shell.home-page .preview-card-image{height:220px;width:min(100%, 220px)}
+  .site-shell.home-page .service-card-image{height:220px;width:min(100%, 220px)}
   .site-shell .doctor-modal .modal-image-fallback{height:210px;margin-bottom:20px;width:100%}
   .site-shell .doctor-modal .modal-close{bottom:12px;font-size:18px;height:30px;right:12px;top:auto;width:30px}
 }
