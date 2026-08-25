@@ -1,5 +1,5 @@
  .site-shell .doctor-modal .modal-close{align-items:center;background:var(--cream);border:1px solid var(--navy);bottom:16px;color:var(--navy);display:flex;font-size:18px;height:32px;justify-content:center;line-height:1;padding:0;position:absolute;right:16px;top:auto;transform:none;width:32px;z-index:2}
- .site-shell .doctor-photo img,.site-shell .preview-card-image,.site-shell .service-card-image,.site-shell .card-top img,.site-shell .award-list-new img,.site-shell .approach-list article>img{object-fit:contain}
+ .site-shell .doctor-photo img,.site-shell .preview-card-image,.site-shell .service-card-image,.site-shell .card-top img,.site-shell .award-list-new img,.site-shell .approach-list article>img{object-fit:cover}
  .site-shell .doctor-modal .modal-profile-image,.site-shell .doctor-modal .service-modal-image{background:var(--mint);border-radius:0!important;display:block;height:260px!important;margin:0 0 30px;object-fit:contain!important;width:100%!important}
  .site-shell .doctor-modal .modal-image-fallback{border-radius:0;height:260px;margin:0 0 30px;width:100%}
 @media (max-width:700px){
