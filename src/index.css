@@ -19,3 +19,8 @@ html,body,#root{min-height:100%;width:100%}button,input{font:inherit}::selection
 .site-shell .doctor-profile-link{margin-top:auto;padding-top:18px}
 .site-shell .doctor-modal h2,.site-shell .doctor-modal p{overflow-wrap:anywhere}
 .site-shell .doctor-modal .modal-bio{line-height:1.8}
+.site-shell .doctor-info{padding:22px 20px 24px}
+.site-shell .doctor-info h3{margin:14px 0 10px}
+.site-shell .doctor-info p{margin:0;min-height:3.2em}
+.site-shell .doctor-profile-link{padding-top:22px}
+@media (max-width:700px){.site-shell .doctor-info{padding:20px 18px 22px}.site-shell .doctor-info h3{margin:12px 0 9px}.site-shell .doctor-info p{min-height:0}.site-shell .doctor-profile-link{padding-top:20px}}
