@@ -1,4 +1,7 @@
- .site-shell .doctor-modal .modal-close{align-items:center;background:var(--cream);border:1px solid var(--navy);bottom:12px!important;color:var(--navy);display:flex;font-size:18px;height:32px;justify-content:center;left:50%;line-height:1;padding:0;position:absolute;right:auto!important;top:auto!important;transform:translateX(-50%);width:32px;z-index:2}
+ .site-shell .doctor-modal .modal-close{align-items:center;background:var(--cream);border:1px solid var(--navy);color:var(--navy);display:flex;font-size:18px;height:32px;justify-content:center;line-height:1;padding:0;position:absolute;right:16px;top:16px;transform:none;width:32px;z-index:2}
+ .site-shell .doctor-photo img,.site-shell .preview-card-image,.site-shell .service-card-image,.site-shell .image-frame img{object-fit:cover}
+ .site-shell .doctor-modal .modal-profile-image,.site-shell .doctor-modal .service-modal-image{border-radius:0!important;display:block;height:260px!important;margin:0 0 30px;object-fit:cover!important;width:100%!important}
+ .site-shell .doctor-modal .modal-image-fallback{border-radius:0;height:260px;margin:0 0 30px;width:100%}
 @media (max-width:700px){
   .site-shell .doctor-card{display:block;width:100%}
   .site-shell .doctor-photo{aspect-ratio:4 / 3;height:auto;min-height:0;padding:0;width:100%}
@@ -9,5 +12,7 @@
   .site-shell .doctor-modal h2{font-size:38px;line-height:.95;margin:14px 0 10px}
   .site-shell .doctor-modal .modal-bio{font-size:13px;line-height:1.6;margin:20px 0}
   .site-shell .doctor-modal .modal-contact{gap:10px;padding-top:12px}
-  .site-shell .doctor-modal .modal-close{bottom:12px!important;font-size:18px;height:30px;left:50%;right:auto!important;top:auto!important;width:30px}
+  .site-shell .doctor-modal .modal-profile-image,.site-shell .doctor-modal .service-modal-image{height:210px!important;margin-bottom:20px;width:100%!important}
+  .site-shell .doctor-modal .modal-image-fallback{height:210px;margin-bottom:20px;width:100%}
+  .site-shell .doctor-modal .modal-close{font-size:18px;height:30px;right:12px;top:12px;width:30px}
 }
