@@ -3,8 +3,8 @@
  .site-shell .doctor-photo{flex:none;height:280px;min-height:280px;width:100%}
  .site-shell .doctor-info{flex:1}
  .site-shell .doctor-photo img,.site-shell .preview-card-image,.site-shell .service-card-image,.site-shell .card-top img,.site-shell .award-list-new img,.site-shell .approach-list article>img{object-fit:cover;width:100%}
- .site-shell .preview-card-image{height:280px;margin-left:0;margin-right:0;width:100%}
- .site-shell .service-card-image{height:280px;margin-left:0;margin-right:0;width:100%}
+ .site-shell .preview-card-image{height:280px;margin-left:-20px;margin-right:-20px;width:calc(100% + 40px)}
+ .site-shell .service-card-image{height:280px;margin-left:-20px;margin-right:-20px;width:calc(100% + 40px)}
  .site-shell .doctors-hero{background:var(--mint);position:sticky;top:63px;z-index:10}
  .site-shell .doctors-hero{padding:4px 5.5vw}
  .site-shell .doctors-hero h1{font-size:clamp(24px,2.4vw,36px);margin:4px 0}
@@ -29,15 +29,15 @@
   .site-shell .doctor-modal .modal-contact{gap:10px;padding-top:12px}
   .site-shell .doctor-modal .modal-profile-image,.site-shell .doctor-modal .service-modal-image{height:210px!important;margin-bottom:20px;width:100%!important}
   .site-shell .doctor-photo{height:220px;min-height:220px;width:100%}
-  .site-shell .preview-card-image{height:220px;width:100%}
-  .site-shell .service-card-image{height:220px;width:100%}
+  .site-shell .preview-card-image{height:220px;margin-left:-16px;margin-right:-16px;width:calc(100% + 32px)}
+  .site-shell .service-card-image{height:220px;margin-left:-20px;margin-right:-20px;width:calc(100% + 40px)}
   .site-shell .doctors-hero{padding:4px 6vw;top:59px}
   .site-shell .doctors-hero h1{font-size:24px;margin:3px 0}
   .site-shell footer>.logo{font-size:15px}
   .site-shell footer>.logo small{font-size:8px}
   .site-shell.home-page .home-visual{height:auto}
-  .site-shell.home-page .preview-card-image{height:220px;width:min(100%, 220px)}
-  .site-shell.home-page .service-card-image{height:220px;width:min(100%, 220px)}
+  .site-shell.home-page .preview-card-image{height:220px;margin-left:auto;margin-right:auto;width:220px}
+  .site-shell.home-page .service-card-image{height:220px;margin-left:auto;margin-right:auto;width:220px}
   .site-shell .doctor-modal .modal-image-fallback{height:210px;margin-bottom:20px;width:100%}
   .site-shell .doctor-modal .modal-close{bottom:12px;font-size:18px;height:30px;right:12px;top:auto;width:30px}
 }
