@@ -18,7 +18,7 @@
  .site-shell.home-page .home-visual{aspect-ratio:1;border-radius:50%;height:auto;overflow:hidden}
  .site-shell.home-page .home-visual-image{border-radius:50%;object-fit:cover}
  .site-shell.home-page .preview-card-image,.site-shell.home-page .service-card-image{border-radius:50%;height:280px;margin-left:auto;margin-right:auto;object-fit:cover;width:min(100%, 280px)}
- .site-shell .doctor-modal .modal-profile-image,.site-shell .doctor-modal .service-modal-image{background:var(--mint);border-radius:0!important;display:block;height:260px!important;margin:0 0 30px;object-fit:contain!important;width:100%!important}
+ .site-shell .doctor-modal .modal-profile-image,.site-shell .doctor-modal .service-modal-image{background:var(--mint);border-radius:0!important;display:block;height:260px!important;margin:0 0 30px;object-fit:cover!important;width:100%!important}
  .site-shell .doctor-modal .modal-image-fallback{border-radius:0;height:260px;margin:0 0 30px;width:100%}
 @media (max-width:700px){
   .site-shell .doctor-card{display:block;width:100%}
@@ -53,6 +53,7 @@
 .site-shell .doctor-info p{font-size:12px;line-height:1.8;margin:0 0 4px!important;min-height:3.6em}
 .site-shell .doctor-profile-link{margin-top:auto;padding-top:24px!important}
 .site-shell .doctor-modal h2{font-size:32px!important;line-height:1.35;margin:14px 0 10px}
+.site-shell .doctor-modal .modal-profile-image,.site-shell .doctor-modal .service-modal-image{object-fit:cover!important}
 @media (max-width:700px){
   .site-shell .doctor-info{padding:22px 20px 24px!important}
   .site-shell .doctor-info h3{font-size:18px;margin:14px 0 10px!important}
