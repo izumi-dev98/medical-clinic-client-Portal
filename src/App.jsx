@@ -11,6 +11,13 @@ import AppointmentModal from './components/AppointmentModal'
 import './App.css'
 import './responsive.css'
 
+function normalizeUnicode(value) {
+  if (typeof value === 'string') return value.normalize('NFC')
+  if (Array.isArray(value)) return value.map(normalizeUnicode)
+  if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([key, entry]) => [key, normalizeUnicode(entry)]))
+  return value
+}
+
 function App() {
   const [content, setContent] = useState({ clinic: null, mission: [], awards: [], services: [], doctors: [], managementTeam: [], packages: [], promotions: [], blog: [], corporate: [], images: {} })
   const [loading, setLoading] = useState(true)
@@ -45,7 +52,7 @@ function App() {
       const imageBuckets = ['clinic-images', 'mission-images', 'award-images', 'doctor-images', 'team-images', 'service-images', 'package-images', 'promotion-images', 'blog-images', 'corporate-images']
       const firstError = clinicResult.error || missionResult.error || awardsResult.error || servicesResult.error || doctorsResult.error || managementResult.error || packagesResult.error || promotionsResult.error || blogResult.error || corporateResult.error
       if (firstError) setError('Some clinic details could not be loaded.')
-      setContent({
+      setContent(normalizeUnicode({
         clinic: clinicResult.data,
         mission: missionResult.data || [],
         awards: awardsResult.data || [],
@@ -57,7 +64,7 @@ function App() {
         blog: blogResult.data || [],
         corporate: corporateResult.data || [],
         images: {},
-      })
+      }))
       setLoading(false)
 
       const imageResults = await Promise.all(imageBuckets.map((bucket) => supabase.storage.from(bucket).list('', {
